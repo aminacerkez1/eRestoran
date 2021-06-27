@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{41CDFA43-BBA0-46A9-BD9E-936FFBDC02DD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>eRestoran.WinUI</RootNamespace>
+    <AssemblyName>eRestoran.WinUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Flurl, Version=2.8.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flurl.2.8.2\lib\net40\Flurl.dll</HintPath>
+    </Reference>
+    <Reference Include="Flurl.Http, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flurl.Http.2.4.2\lib\net46\Flurl.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApiService.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Jelo\frmJelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jelo\frmJelo.Designer.cs">
+      <DependentUpon>frmJelo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jelo\frmJeloDodaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jelo\frmJeloDodaj.Designer.cs">
+      <DependentUpon>frmJeloDodaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klijent\frmKlijentDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Klijent\frmKlijentDetalji.Designer.cs">
+      <DependentUpon>frmKlijentDetalji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klijent\frmKlijenti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Klijent\frmKlijenti.Designer.cs">
+      <DependentUpon>frmKlijenti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nabavka\frmNabavka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nabavka\frmNabavka.Designer.cs">
+      <DependentUpon>frmNabavka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nabavka\frmNabavkaDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nabavka\frmNabavkaDetalji.Designer.cs">
+      <DependentUpon>frmNabavkaDetalji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nabavka\frmNabavkaNova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nabavka\frmNabavkaNova.Designer.cs">
+      <DependentUpon>frmNabavkaNova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nabavka\frmNabavkaNovaNamirnica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nabavka\frmNabavkaNovaNamirnica.Designer.cs">
+      <DependentUpon>frmNabavkaNovaNamirnica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nabavka\frmNabavkaNovaPica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nabavka\frmNabavkaNovaPica.Designer.cs">
+      <DependentUpon>frmNabavkaNovaPica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Narudzba\frmNarudzba.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Narudzba\frmNarudzba.Designer.cs">
+      <DependentUpon>frmNarudzba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Narudzba\frmNarudzbaDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Narudzba\frmNarudzbaDetalji.Designer.cs">
+      <DependentUpon>frmNarudzbaDetalji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profil\frmProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profil\frmProfil.Designer.cs">
+      <DependentUpon>frmProfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Rezervacija\frmRezervacija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rezervacija\frmRezervacija.Designer.cs">
+      <DependentUpon>frmRezervacija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rezervacija\frmRezervacijaDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rezervacija\frmRezervacijaDetalji.Designer.cs">
+      <DependentUpon>frmRezervacijaDetalji.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Skladiste\frmSkladisteNamirnica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Skladiste\frmSkladisteNamirnica.Designer.cs">
+      <DependentUpon>frmSkladisteNamirnica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Skladiste\frmSkladisteNamirnicaUredi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Skladiste\frmSkladisteNamirnicaUredi.Designer.cs">
+      <DependentUpon>frmSkladisteNamirnicaUredi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Skladiste\frmSkladistePica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Skladiste\frmSkladistePica.Designer.cs">
+      <DependentUpon>frmSkladistePica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Skladiste\frmSkladistePicaUredi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Skladiste\frmSkladistePicaUredi.Designer.cs">
+      <DependentUpon>frmSkladistePicaUredi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util.cs" />
+    <Compile Include="Zaposlenik\frmNoviZaposlenik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zaposlenik\frmNoviZaposlenik.Designer.cs">
+      <DependentUpon>frmNoviZaposlenik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Zaposlenik\frmZaposlenici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zaposlenik\frmZaposlenici.Designer.cs">
+      <DependentUpon>frmZaposlenici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Zaposlenik\frmZaposlenikDetalji.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zaposlenik\frmZaposlenikDetalji.Designer.cs">
+      <DependentUpon>frmZaposlenikDetalji.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Jelo\frmJelo.resx">
+      <DependentUpon>frmJelo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jelo\frmJeloDodaj.resx">
+      <DependentUpon>frmJeloDodaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Klijent\frmKlijentDetalji.resx">
+      <DependentUpon>frmKlijentDetalji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Klijent\frmKlijenti.resx">
+      <DependentUpon>frmKlijenti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLogin.aa.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\frmMain.aa-DJ.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\frmMain.aa-ET.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\frmMain.aa.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nabavka\frmNabavka.resx">
+      <DependentUpon>frmNabavka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nabavka\frmNabavkaDetalji.resx">
+      <DependentUpon>frmNabavkaDetalji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nabavka\frmNabavkaNova.resx">
+      <DependentUpon>frmNabavkaNova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nabavka\frmNabavkaNovaNamirnica.resx">
+      <DependentUpon>frmNabavkaNovaNamirnica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nabavka\frmNabavkaNovaPica.resx">
+      <DependentUpon>frmNabavkaNovaPica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Narudzba\frmNarudzba.resx">
+      <DependentUpon>frmNarudzba.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Narudzba\frmNarudzbaDetalji.resx">
+      <DependentUpon>frmNarudzbaDetalji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profil\frmProfil.resx">
+      <DependentUpon>frmProfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rezervacija\frmRezervacija.resx">
+      <DependentUpon>frmRezervacija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rezervacija\frmRezervacijaDetalji.resx">
+      <DependentUpon>frmRezervacijaDetalji.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Skladiste\frmSkladisteNamirnica.resx">
+      <DependentUpon>frmSkladisteNamirnica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Skladiste\frmSkladisteNamirnicaUredi.resx">
+      <DependentUpon>frmSkladisteNamirnicaUredi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Skladiste\frmSkladistePica.resx">
+      <DependentUpon>frmSkladistePica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Skladiste\frmSkladistePicaUredi.resx">
+      <DependentUpon>frmSkladistePicaUredi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zaposlenik\frmNoviZaposlenik.resx">
+      <DependentUpon>frmNoviZaposlenik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zaposlenik\frmZaposlenici.resx">
+      <DependentUpon>frmZaposlenici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zaposlenik\frmZaposlenikDetalji.resx">
+      <DependentUpon>frmZaposlenikDetalji.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\eRestoran.Model\eRestoran.Model.csproj">
+      <Project>{f27b8dd6-1feb-4739-8d7a-88698c43484a}</Project>
+      <Name>eRestoran.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
