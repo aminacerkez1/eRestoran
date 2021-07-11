@@ -52,10 +52,11 @@ namespace eRestoran_API
             services.AddScoped<IVrstaJelaService, VrstaJelaService>();
             services.AddScoped<IJeloService, JeloService>();
             services.AddScoped<INarudzbaJeloService, NarudzbaJeloService>();
+            services.AddScoped<IOcjenaService, OcjenaService>();
 
-            var connection = @"Server=.;Database=IB140235;Trusted_Connection=True;";
+            //var connection = @"Server=.;Database=IB140235;Trusted_Connection=True;";
 
-            services.AddDbContext<IB140235Context>(options => options.UseSqlServer(connection));
+            services.AddDbContext<IB140235Context>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

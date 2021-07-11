@@ -24,6 +24,11 @@ namespace eRestoran.WinUI.Nabavka
 
         private async void btnSnimiPice_Click(object sender, EventArgs e)
         {
+            if (txtNaziv.Text.Length == 0 || txtCijena.Text.Length == 0)
+            {
+                MessageBox.Show("Popunite sva obavezna polja!");
+                return;
+            }
             var novoPice = new PiceInsertRequest()
             {
                 Naziv = txtNaziv.Text,
@@ -34,5 +39,31 @@ namespace eRestoran.WinUI.Nabavka
             await _servicePice.Insert<eRestoran.Model.Pice>(novoPice);
             Close();
         }
+
+        private void txtNaziv_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtNaziv.Text))
+            {
+                errorProvider1.SetError(txtNaziv, Properties.Resources.Validation_RequiredField);
+            }
+            else
+            {
+                errorProvider1.SetError(txtNaziv, null);
+            }
+        }
+
+        private void txtCijena_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtCijena.Text))
+            {
+                errorProvider1.SetError(txtNaziv, Properties.Resources.Validation_RequiredField);
+            }
+            else
+            {
+                errorProvider1.SetError(txtCijena, null);
+            }
+        }
+
+     
     }
 }

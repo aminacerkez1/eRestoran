@@ -4,6 +4,7 @@ using eRestoran_API.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.Xml;
 using System.Threading.Tasks;
 
 namespace eRestoran_API.Services
@@ -40,13 +41,14 @@ namespace eRestoran_API.Services
         public eRestoran.Model.Rezervacija Insert(RezervacijaInsertRequest request)
         {
             var entity = _mapper.Map<Database.Rezervacija>(request);
+            entity.NaCekanju = true;
             _context.Rezervacija.Add(entity);
             _context.SaveChanges();
             return _mapper.Map<eRestoran.Model.Rezervacija>(entity);
 
         }
 
-        public eRestoran.Model.Rezervacija Update(int id,RezervacijaInsertRequest rezervacija)
+        public eRestoran.Model.Rezervacija Update(int id,RezervacijaUpdateRequest rezervacija)
         {
             var entity = _context.Rezervacija.Find(id);
 

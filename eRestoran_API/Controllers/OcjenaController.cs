@@ -8,40 +8,34 @@ using System.Threading.Tasks;
 
 namespace eRestoran_API.Controllers
 {
+
     [Route("api/[controller]")]
     [ApiController]
-    public class NarudzbaJeloController : ControllerBase
+    public class OcjenaController : ControllerBase
     {
-        private readonly INarudzbaJeloService _service;
-        public NarudzbaJeloController(INarudzbaJeloService service)
+        private readonly IOcjenaService _service;
+        public OcjenaController(IOcjenaService service)
         {
             _service = service;
         }
 
         [HttpGet]
-        public List<eRestoran.Model.NarudzbaJelo> Get()
+        public List<eRestoran.Model.Ocjena> Get()
         {
-            
             return _service.Get();
         }
 
         [HttpGet("{id}")]
-        public eRestoran.Model.NarudzbaJelo GetById(int id)
+        public eRestoran.Model.Ocjena GetById(int id)
         {
             return _service.GetById(id);
         }
 
-        [HttpGet]
-        [Route("GetByNarudzbe/{id}")]
-        public List<eRestoran.Model.NarudzbaJelo> GetByNarudzbe(int id)
-        {
-            return _service.GetByNarudzbe(id);
-        }
-
         [HttpPost]
-        public eRestoran.Model.NarudzbaJelo Insert(NarudzbaJeloInsertRequest request)
+        public eRestoran.Model.Ocjena Insert(OcjenaInsertRequest request)
         {
             return _service.Insert(request);
         }
     }
-}
+
+    }

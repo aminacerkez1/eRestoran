@@ -46,5 +46,11 @@ namespace eRestoran_API.Controllers
             return _service.Insert(request);
         }
 
+        [HttpPut("{id}")]
+        public eRestoran.Model.Klijent Update(int id, KlijentInsertRequest request)
+        {
+            return _service.Update(id, request);
+        }
+
     }
 }

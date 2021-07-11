@@ -84,6 +84,7 @@ namespace eRestoran_API.Services
         public eRestoran.Model.Klijent Insert(KlijentInsertRequest request)
         {
             var entity = _mapper.Map<Database.Klijent>(request);
+            
             if (request.Password != request.PasswordConfirmation)
             {
                 throw new UserException("Passwordi se ne podudaraju!!");
@@ -103,6 +104,26 @@ namespace eRestoran_API.Services
             var entity = _context.Klijent.Find(id);
             return Mapper.Map<eRestoran.Model.Klijent>(entity);
 
+        }
+
+        public eRestoran.Model.Klijent Update(int id, KlijentInsertRequest request)
+        {
+            var entity = _context.Klijent.Find(id);
+
+            _mapper.Map(request, entity);
+
+            if (!string.IsNullOrWhiteSpace(request.Password))
+            {
+                if (request.Password != request.PasswordConfirmation)
+                {
+                    throw new Exception("Passwordi se ne podudaraju!!");
+                }
+            }
+            entity.PasswordSalt = GenerateSalt();
+            entity.PasswordHash = GenerateHash(entity.PasswordSalt, request.Password);
+            _context.SaveChanges();
+
+            return _mapper.Map<eRestoran.Model.Klijent>(entity);
         }
 
     }

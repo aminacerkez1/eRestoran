@@ -29,6 +29,7 @@ namespace eRestoran.WinUI.Skladiste
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSkladisteNamirnicaUredi));
             this.btnSnimiNamirnica = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,6 +40,8 @@ namespace eRestoran.WinUI.Skladiste
             this.label1 = new System.Windows.Forms.Label();
             this.txtCijena = new System.Windows.Forms.TextBox();
             this.txtNamirnica = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSnimiNamirnica
@@ -87,6 +90,7 @@ namespace eRestoran.WinUI.Skladiste
             this.txtStanje.Name = "txtStanje";
             this.txtStanje.Size = new System.Drawing.Size(235, 20);
             this.txtStanje.TabIndex = 63;
+            this.txtStanje.Validating += new System.ComponentModel.CancelEventHandler(this.txtStanje_Validating);
             // 
             // Nabavke
             // 
@@ -132,6 +136,7 @@ namespace eRestoran.WinUI.Skladiste
             this.txtCijena.Name = "txtCijena";
             this.txtCijena.Size = new System.Drawing.Size(235, 20);
             this.txtCijena.TabIndex = 59;
+            this.txtCijena.Validating += new System.ComponentModel.CancelEventHandler(this.txtCijena_Validating);
             // 
             // txtNamirnica
             // 
@@ -142,6 +147,11 @@ namespace eRestoran.WinUI.Skladiste
             this.txtNamirnica.Name = "txtNamirnica";
             this.txtNamirnica.Size = new System.Drawing.Size(235, 22);
             this.txtNamirnica.TabIndex = 58;
+            this.txtNamirnica.Validating += new System.ComponentModel.CancelEventHandler(this.txtNamirnica_Validating);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmSkladisteNamirnicaUredi
             // 
@@ -163,6 +173,7 @@ namespace eRestoran.WinUI.Skladiste
             this.Name = "frmSkladisteNamirnicaUredi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmSkladisteNamirnicaUredi_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,5 +190,6 @@ namespace eRestoran.WinUI.Skladiste
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCijena;
         private System.Windows.Forms.TextBox txtNamirnica;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

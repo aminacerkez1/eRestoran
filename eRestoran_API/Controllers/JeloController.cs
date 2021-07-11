@@ -1,4 +1,4 @@
-﻿using eRestoran.Model.Requests;
+﻿ using eRestoran.Model.Requests;
 using eRestoran_API.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -37,6 +37,12 @@ namespace eRestoran_API.Controllers
         public eRestoran.Model.Jelo Insert(JeloInsertRequest request)
         {
             return _service.Insert(request);
+        }
+
+        [HttpGet("getRecommendedJelo/{id}")]
+        public List<eRestoran.Model.Jelo> getRecommendedJelo(int id)
+        {
+            return _service.GetRecommendedJelo(id);
         }
     }
 }

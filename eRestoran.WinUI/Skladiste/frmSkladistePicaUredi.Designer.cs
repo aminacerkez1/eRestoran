@@ -29,6 +29,7 @@ namespace eRestoran.WinUI.Skladiste
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSkladistePicaUredi));
             this.Nabavke = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,6 +40,8 @@ namespace eRestoran.WinUI.Skladiste
             this.txtStanje = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnSnimiPice = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // Nabavke
@@ -85,6 +88,7 @@ namespace eRestoran.WinUI.Skladiste
             this.txtCijena.Name = "txtCijena";
             this.txtCijena.Size = new System.Drawing.Size(235, 20);
             this.txtCijena.TabIndex = 30;
+            this.txtCijena.Validating += new System.ComponentModel.CancelEventHandler(this.txtCijena_Validating);
             // 
             // txtPice
             // 
@@ -95,6 +99,7 @@ namespace eRestoran.WinUI.Skladiste
             this.txtPice.Name = "txtPice";
             this.txtPice.Size = new System.Drawing.Size(235, 22);
             this.txtPice.TabIndex = 29;
+            this.txtPice.Validating += new System.ComponentModel.CancelEventHandler(this.txtPice_Validating);
             // 
             // label3
             // 
@@ -115,6 +120,7 @@ namespace eRestoran.WinUI.Skladiste
             this.txtStanje.Name = "txtStanje";
             this.txtStanje.Size = new System.Drawing.Size(235, 20);
             this.txtStanje.TabIndex = 34;
+            this.txtStanje.Validating += new System.ComponentModel.CancelEventHandler(this.txtStanje_Validating);
             // 
             // label4
             // 
@@ -143,6 +149,10 @@ namespace eRestoran.WinUI.Skladiste
             this.btnSnimiPice.UseVisualStyleBackColor = false;
             this.btnSnimiPice.Click += new System.EventHandler(this.btnSnimiPice_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmSkladistePicaUredi
             // 
             this.AccessibleName = "frmSkladistePicaUredi";
@@ -164,6 +174,7 @@ namespace eRestoran.WinUI.Skladiste
             this.Name = "frmSkladistePicaUredi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmSkladistePicaUredi_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,5 +191,6 @@ namespace eRestoran.WinUI.Skladiste
         private System.Windows.Forms.TextBox txtStanje;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSnimiPice;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

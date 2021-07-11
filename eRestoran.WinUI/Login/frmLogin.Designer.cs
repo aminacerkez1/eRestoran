@@ -139,10 +139,10 @@ namespace eRestoran.WinUI.Login
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmLogin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

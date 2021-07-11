@@ -15,5 +15,7 @@ namespace eRestoran_API.Services
 
         eRestoran.Model.Namirnica Insert(NamirnicaInsertRequest pice);
 
+        List<eRestoran.Model.Namirnica> GetPrilog();
+
     }
 }

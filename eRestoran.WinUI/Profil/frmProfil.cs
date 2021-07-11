@@ -62,6 +62,19 @@ namespace eRestoran.WinUI.Profil
 
         private async void btnProfilSpasi_Click(object sender, EventArgs e)
         {
+            if (txtIme.Text.Length == 0 || txtPrezime.Text.Length == 0 || txtTelefon.Text.Length == 0 || txtEmail.Text.Length==0 || KorisnickoIme.Text.Length==0 ||
+                Lozinka.Text.Length==0 || textLozinkaPotvrda.Text.Length==0)
+            {
+                MessageBox.Show("Popunite sva obavezna polja!");
+                return;
+            }
+
+
+            if (Lozinka.Text != textLozinkaPotvrda.Text)
+            {
+                MessageBox.Show("Lozinka i potvrda lozinke nisu jednake!");
+                return;
+            }
             var selectedUloga = comboBoxUloga.SelectedItem.ToString();
             var uloga = await ulogaService.GetByName<eRestoran.Model.Uloga>(selectedUloga);
             var request = new ZaposlenikInsertRequest()
@@ -94,6 +107,88 @@ namespace eRestoran.WinUI.Profil
           
         }
 
-     
+        private void txtIme_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtIme.Text))
+            {
+                errorProvider1.SetError(txtIme, Properties.Resources.Validation_RequiredField);
+            }
+            else
+            {
+                errorProvider1.SetError(txtIme, null);
+            }
+        }
+
+        private void txtPrezime_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPrezime.Text))
+            {
+                errorProvider1.SetError(txtPrezime, Properties.Resources.Validation_RequiredField);
+            }
+            else
+            {
+                errorProvider1.SetError(txtPrezime, null);
+            }
+        }
+
+        private void txtEmail_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtEmail.Text))
+            {
+                errorProvider1.SetError(txtEmail, Properties.Resources.Validation_RequiredField);
+            }
+            else
+            {
+                errorProvider1.SetError(txtEmail, null);
+            }
+        }
+
+        private void txtTelefon_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtTelefon.Text))
+            {
+                errorProvider1.SetError(txtTelefon, Properties.Resources.Validation_RequiredField);
+            }
+            else
+            {
+                errorProvider1.SetError(txtTelefon, null);
+            }
+        }
+
+        private void KorisnickoIme_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(KorisnickoIme.Text))
+            {
+                errorProvider1.SetError(KorisnickoIme, Properties.Resources.Validation_RequiredField);
+            }
+            else
+            {
+                errorProvider1.SetError(KorisnickoIme, null);
+            }
+        }
+
+        private void Lozinka_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(Lozinka.Text))
+            {
+                errorProvider1.SetError(Lozinka, Properties.Resources.Validation_RequiredField);
+            }
+            else
+            {
+                errorProvider1.SetError(Lozinka, null);
+            }
+        }
+
+        private void textLozinkaPotvrda_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(textLozinkaPotvrda.Text))
+            {
+                errorProvider1.SetError(textLozinkaPotvrda, Properties.Resources.Validation_RequiredField);
+            }
+            else
+            {
+                errorProvider1.SetError(textLozinkaPotvrda, null);
+            }
+        }
     }
 }

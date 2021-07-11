@@ -1,4 +1,5 @@
-﻿using System;
+﻿using eRestoran.Model.Requests;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,5 +12,6 @@ namespace eRestoran_API.Services
 
         List<eRestoran.Model.NarudzbaJelo> Get();
         eRestoran.Model.NarudzbaJelo GetById(int id);
+        eRestoran.Model.NarudzbaJelo Insert(NarudzbaJeloInsertRequest request);
     }
 }

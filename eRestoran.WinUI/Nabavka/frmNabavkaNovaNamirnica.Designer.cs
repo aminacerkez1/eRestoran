@@ -29,6 +29,7 @@ namespace eRestoran.WinUI.Nabavka
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnSnimiNamirnica = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.Nabavke = new System.Windows.Forms.Label();
@@ -37,6 +38,8 @@ namespace eRestoran.WinUI.Nabavka
             this.txtCijena = new System.Windows.Forms.TextBox();
             this.txtNamirnica = new System.Windows.Forms.TextBox();
             this.Prilog = new System.Windows.Forms.CheckBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSnimiNamirnica
@@ -109,6 +112,7 @@ namespace eRestoran.WinUI.Nabavka
             this.txtCijena.Name = "txtCijena";
             this.txtCijena.Size = new System.Drawing.Size(235, 20);
             this.txtCijena.TabIndex = 68;
+            this.txtCijena.Validating += new System.ComponentModel.CancelEventHandler(this.txtCijena_Validating);
             // 
             // txtNamirnica
             // 
@@ -119,6 +123,7 @@ namespace eRestoran.WinUI.Nabavka
             this.txtNamirnica.Name = "txtNamirnica";
             this.txtNamirnica.Size = new System.Drawing.Size(235, 22);
             this.txtNamirnica.TabIndex = 67;
+            this.txtNamirnica.Validating += new System.ComponentModel.CancelEventHandler(this.txtNamirnica_Validating);
             // 
             // Prilog
             // 
@@ -130,6 +135,10 @@ namespace eRestoran.WinUI.Nabavka
             this.Prilog.TabIndex = 76;
             this.Prilog.Text = "Prilog";
             this.Prilog.UseVisualStyleBackColor = true;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmNabavkaNovaNamirnica
             // 
@@ -146,6 +155,7 @@ namespace eRestoran.WinUI.Nabavka
             this.Controls.Add(this.txtNamirnica);
             this.Name = "frmNabavkaNovaNamirnica";
             this.Text = "frmNabavkaNovaNamirnica";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,5 +171,6 @@ namespace eRestoran.WinUI.Nabavka
         private System.Windows.Forms.TextBox txtCijena;
         private System.Windows.Forms.TextBox txtNamirnica;
         private System.Windows.Forms.CheckBox Prilog;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

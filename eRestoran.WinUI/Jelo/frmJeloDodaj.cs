@@ -30,35 +30,84 @@ namespace eRestoran.WinUI.Jelo
             var vrstaJela = await _service.Get<List<eRestoran.Model.VrstaJela>>(null);
 
             var vrstaNaziv = new List<String>();
-          
-           
+
+
             vrstaNaziv.Add("Izaberite vrstu jela");
 
             foreach (var item in vrstaJela)
             {
                 vrstaNaziv.Add(item.Naziv);
             }
-           
-           
+
+
             comboBoxVrstaJela.DataSource = vrstaNaziv;
+            comboBoxVrstaJela.SelectedItem = "Izaberite vrstu jela";
         }
 
         private async void btnSnimiJelo_Click(object sender, EventArgs e)
         {
-            var selectedVrstaJela= comboBoxVrstaJela.SelectedItem.ToString();
-          
-          
-            var vrstaJela = await _service.GetByName<eRestoran.Model.VrstaJela>(selectedVrstaJela);
-
-    
-            var novoJelo = new JeloInsertRequest()
+            if (txtNaziv.Text.Length == 0 || txtCijena.Text.Length == 0 || comboBoxVrstaJela.Text.ToString()=="Izaberite vrstu jela")
             {
-                Naziv = txtNaziv.Text,
-                Cijena= decimal.Parse(txtCijena.Text),
-                VrstaJelaId=vrstaJela.VrstaJelaId
-            };
-            await _serviceJelo.Insert<eRestoran.Model.Jelo>(novoJelo);
-            Close();
+                MessageBox.Show("Popunite sva obavezna polja!");
+                return;
+            }
+
+            if (comboBoxVrstaJela.SelectedItem.ToString() == "Izaberite vrstu jela")
+                {
+                    MessageBox.Show("Jelo je obavezno!");
+                    return;
+                }
+                var selectedVrstaJela = comboBoxVrstaJela.SelectedItem.ToString();
+
+
+                var vrstaJela = await _service.GetByName<eRestoran.Model.VrstaJela>(selectedVrstaJela);
+
+
+                var novoJelo = new JeloInsertRequest()
+                {
+                    Naziv = txtNaziv.Text,
+                    Cijena = decimal.Parse(txtCijena.Text),
+                    VrstaJelaId = vrstaJela.VrstaJelaId
+                };
+                await _serviceJelo.Insert<eRestoran.Model.Jelo>(novoJelo);
+                Close();
+            
+        }
+
+        private void txtNaziv_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtNaziv.Text))
+            {
+                errorProvider1.SetError(txtNaziv, Properties.Resources.Validation_RequiredField);
+            }
+            else
+            {
+                errorProvider1.SetError(txtNaziv, null);
+            }
+        }
+
+        private void txtCijena_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtCijena.Text))
+            {
+                errorProvider1.SetError(txtCijena, Properties.Resources.Validation_RequiredField);
+            }
+            else
+            {
+                errorProvider1.SetError(txtCijena, null);
+            }
+        }
+
+        private void comboBoxVrstaJela_Validating(object sender, CancelEventArgs e)
+        {
+            if (comboBoxVrstaJela.SelectedItem.ToString() == "Izaberite vrstu jela")
+            {
+                errorProvider1.SetError(comboBoxVrstaJela, Properties.Resources.Validation_RequiredField);
+            }
+            else
+            {
+                errorProvider1.SetError(comboBoxVrstaJela, null);
+            }
         }
 
        

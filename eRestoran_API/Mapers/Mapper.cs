@@ -26,16 +26,23 @@ namespace eRestoran_API.Mapers
             CreateMap<Database.Namirnica, NamirnicaInsertRequest>().ReverseMap();
             CreateMap<Database.Rezervacija, eRestoran.Model.Rezervacija>();
             CreateMap<Database.Rezervacija, RezervacijaInsertRequest>().ReverseMap();
+            CreateMap<Database.Rezervacija, RezervacijaUpdateRequest>().ReverseMap();
             CreateMap<Database.Narudzba, eRestoran.Model.Narudzba>();
+            CreateMap<Database.Narudzba, NarudzbaUpdateRequest>().ReverseMap();
             CreateMap<Database.Narudzba, NarudzbaInsertRequest>().ReverseMap();
+            CreateMap<Database.Narudzba, NarudzbaUpdateCijenaRequest>().ReverseMap();
             CreateMap<Database.VrstaJela, eRestoran.Model.VrstaJela>();
             CreateMap<Database.Jelo, eRestoran.Model.Jelo>();
             CreateMap<Database.Jelo, JeloInsertRequest>().ReverseMap();
             CreateMap<Database.NarudzbaJelo, eRestoran.Model.NarudzbaJelo>();
+            CreateMap<Database.NarudzbaJelo, NarudzbaJeloInsertRequest>().ReverseMap();
             CreateMap<Database.Nabavka, NabavkaInsertRequest>().ReverseMap();
             CreateMap<Database.NabavkaNamirnica, NabavkaNamirnicaInsertRequest>().ReverseMap();
             CreateMap<Database.NabavkaPice, NabavkaPiceInsertRequest>().ReverseMap();
-            
+            CreateMap<Database.Ocjena, eRestoran.Model.Ocjena>();
+            CreateMap<Database.Ocjena, OcjenaInsertRequest>().ReverseMap();
+            CreateMap<Database.NabavkaPice, NabavkaPiceInsertRequest>().ReverseMap();
+
 
         }
 

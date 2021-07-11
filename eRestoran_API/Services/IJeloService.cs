@@ -14,5 +14,7 @@ namespace eRestoran_API.Services
 
         eRestoran.Model.Jelo Insert(JeloInsertRequest jelo);
 
+        List<eRestoran.Model.Jelo> GetRecommendedJelo(int id);
+
     }
 }

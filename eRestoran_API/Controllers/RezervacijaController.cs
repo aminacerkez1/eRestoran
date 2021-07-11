@@ -46,7 +46,7 @@ namespace eRestoran_API.Controllers
         }
 
         [HttpPut("{id}")]
-        public eRestoran.Model.Rezervacija Update(int id, RezervacijaInsertRequest request)
+        public eRestoran.Model.Rezervacija Update(int id, RezervacijaUpdateRequest request)
         {
             return _service.Update(id, request);
         }

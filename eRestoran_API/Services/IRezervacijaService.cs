@@ -16,7 +16,7 @@ namespace eRestoran_API.Services
 
         eRestoran.Model.Rezervacija Insert(RezervacijaInsertRequest rezervacija);
 
-        eRestoran.Model.Rezervacija Update(int id, RezervacijaInsertRequest rezervacija);
+        eRestoran.Model.Rezervacija Update(int id, RezervacijaUpdateRequest rezervacija);
 
         List<eRestoran.Model.Rezervacija> GetByKlijent(int id);
     }

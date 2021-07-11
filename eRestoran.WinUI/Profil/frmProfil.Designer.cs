@@ -29,6 +29,7 @@ namespace eRestoran.WinUI.Profil
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProfil));
             this.Nabavke = new System.Windows.Forms.Label();
             this.comboBoxUloga = new System.Windows.Forms.ComboBox();
@@ -53,6 +54,8 @@ namespace eRestoran.WinUI.Profil
             this.btnProfilSpasi = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.textLozinkaPotvrda = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // Nabavke
@@ -196,6 +199,7 @@ namespace eRestoran.WinUI.Profil
             this.txtTelefon.Name = "txtTelefon";
             this.txtTelefon.Size = new System.Drawing.Size(235, 20);
             this.txtTelefon.TabIndex = 64;
+            this.txtTelefon.Validating += new System.ComponentModel.CancelEventHandler(this.txtTelefon_Validating);
             // 
             // txtEmail
             // 
@@ -204,6 +208,7 @@ namespace eRestoran.WinUI.Profil
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(235, 20);
             this.txtEmail.TabIndex = 63;
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // txtPrezime
             // 
@@ -212,6 +217,7 @@ namespace eRestoran.WinUI.Profil
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Size = new System.Drawing.Size(235, 20);
             this.txtPrezime.TabIndex = 62;
+            this.txtPrezime.Validating += new System.ComponentModel.CancelEventHandler(this.txtPrezime_Validating);
             // 
             // txtIme
             // 
@@ -221,6 +227,7 @@ namespace eRestoran.WinUI.Profil
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(235, 22);
             this.txtIme.TabIndex = 61;
+            this.txtIme.Validating += new System.ComponentModel.CancelEventHandler(this.txtIme_Validating);
             // 
             // label3
             // 
@@ -241,6 +248,7 @@ namespace eRestoran.WinUI.Profil
             this.KorisnickoIme.Name = "KorisnickoIme";
             this.KorisnickoIme.Size = new System.Drawing.Size(235, 20);
             this.KorisnickoIme.TabIndex = 77;
+            this.KorisnickoIme.Validating += new System.ComponentModel.CancelEventHandler(this.KorisnickoIme_Validating);
             // 
             // label9
             // 
@@ -262,6 +270,7 @@ namespace eRestoran.WinUI.Profil
             this.Lozinka.Size = new System.Drawing.Size(235, 20);
             this.Lozinka.TabIndex = 79;
             this.Lozinka.UseSystemPasswordChar = true;
+            this.Lozinka.Validating += new System.ComponentModel.CancelEventHandler(this.Lozinka_Validating);
             // 
             // btnProfilSpasi
             // 
@@ -299,6 +308,11 @@ namespace eRestoran.WinUI.Profil
             this.textLozinkaPotvrda.Size = new System.Drawing.Size(235, 20);
             this.textLozinkaPotvrda.TabIndex = 82;
             this.textLozinkaPotvrda.UseSystemPasswordChar = true;
+            this.textLozinkaPotvrda.Validating += new System.ComponentModel.CancelEventHandler(this.textLozinkaPotvrda_Validating);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmProfil
             // 
@@ -334,6 +348,7 @@ namespace eRestoran.WinUI.Profil
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmProfil";
             this.Load += new System.EventHandler(this.frmProfileDetalji_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,5 +379,6 @@ namespace eRestoran.WinUI.Profil
         private System.Windows.Forms.Button btnProfilSpasi;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textLozinkaPotvrda;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -29,6 +29,7 @@ namespace eRestoran.WinUI.Jelo
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmJeloDodaj));
             this.Nabavke = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,6 +39,8 @@ namespace eRestoran.WinUI.Jelo
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxVrstaJela = new System.Windows.Forms.ComboBox();
             this.btnSnimiJelo = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // Nabavke
@@ -83,6 +86,7 @@ namespace eRestoran.WinUI.Jelo
             this.txtCijena.Name = "txtCijena";
             this.txtCijena.Size = new System.Drawing.Size(235, 20);
             this.txtCijena.TabIndex = 30;
+            this.txtCijena.Validating += new System.ComponentModel.CancelEventHandler(this.txtCijena_Validating);
             // 
             // txtNaziv
             // 
@@ -92,6 +96,7 @@ namespace eRestoran.WinUI.Jelo
             this.txtNaziv.Name = "txtNaziv";
             this.txtNaziv.Size = new System.Drawing.Size(235, 22);
             this.txtNaziv.TabIndex = 29;
+            this.txtNaziv.Validating += new System.ComponentModel.CancelEventHandler(this.txtNaziv_Validating);
             // 
             // label3
             // 
@@ -113,6 +118,8 @@ namespace eRestoran.WinUI.Jelo
             this.comboBoxVrstaJela.Name = "comboBoxVrstaJela";
             this.comboBoxVrstaJela.Size = new System.Drawing.Size(235, 21);
             this.comboBoxVrstaJela.TabIndex = 47;
+          
+            this.comboBoxVrstaJela.Validating += new System.ComponentModel.CancelEventHandler(this.comboBoxVrstaJela_Validating);
             // 
             // btnSnimiJelo
             // 
@@ -128,6 +135,10 @@ namespace eRestoran.WinUI.Jelo
             this.btnSnimiJelo.Text = "Snimi";
             this.btnSnimiJelo.UseVisualStyleBackColor = false;
             this.btnSnimiJelo.Click += new System.EventHandler(this.btnSnimiJelo_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmJeloDodaj
             // 
@@ -149,6 +160,7 @@ namespace eRestoran.WinUI.Jelo
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmJeloDodaj";
             this.Load += new System.EventHandler(this.frmJeloDodaj_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,5 +176,6 @@ namespace eRestoran.WinUI.Jelo
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBoxVrstaJela;
         private System.Windows.Forms.Button btnSnimiJelo;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

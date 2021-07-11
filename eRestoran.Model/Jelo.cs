@@ -15,5 +15,6 @@ namespace eRestoran.Model
         public string JeloNaziv { get; set; }
         public string VrstaJela { get; set; }
         public int JeloId { get; set; }
+        public string ProsjecnaOcjena { get; set; }
     }
 }

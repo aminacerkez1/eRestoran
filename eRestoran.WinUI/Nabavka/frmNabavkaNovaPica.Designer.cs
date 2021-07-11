@@ -29,6 +29,7 @@ namespace eRestoran.WinUI.Nabavka
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.numericUpDownPice = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,15 +38,27 @@ namespace eRestoran.WinUI.Nabavka
             this.Nabavke = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNaziv = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // numericUpDownPice
             // 
             this.numericUpDownPice.Location = new System.Drawing.Point(46, 240);
+            this.numericUpDownPice.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDownPice.Name = "numericUpDownPice";
             this.numericUpDownPice.Size = new System.Drawing.Size(235, 20);
             this.numericUpDownPice.TabIndex = 69;
+            this.numericUpDownPice.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label3
             // 
@@ -78,6 +91,7 @@ namespace eRestoran.WinUI.Nabavka
             this.txtCijena.Name = "txtCijena";
             this.txtCijena.Size = new System.Drawing.Size(235, 20);
             this.txtCijena.TabIndex = 66;
+            this.txtCijena.Validating += new System.ComponentModel.CancelEventHandler(this.txtCijena_Validating);
             // 
             // btnSnimiPice
             // 
@@ -126,6 +140,11 @@ namespace eRestoran.WinUI.Nabavka
             this.txtNaziv.Name = "txtNaziv";
             this.txtNaziv.Size = new System.Drawing.Size(235, 22);
             this.txtNaziv.TabIndex = 62;
+            this.txtNaziv.Validating += new System.ComponentModel.CancelEventHandler(this.txtNaziv_Validating);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmNabavkaNovaPica
             // 
@@ -143,6 +162,7 @@ namespace eRestoran.WinUI.Nabavka
             this.Name = "frmNabavkaNovaPica";
             this.Text = "frmNabavkaNovaPica";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,5 +178,6 @@ namespace eRestoran.WinUI.Nabavka
         private System.Windows.Forms.Label Nabavke;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNaziv;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -52,7 +52,7 @@ namespace eRestoran.WinUI.Narudzba
 
         private async void btnSnimi_Click(object sender, EventArgs e)
         {
-            var request = new NarudzbaInsertRequest()
+            var request = new NarudzbaUpdateRequest()
             {
                 NaCekanju = true
 
@@ -99,7 +99,7 @@ namespace eRestoran.WinUI.Narudzba
            
             var narudzba = await _apiService.GetById<eRestoran.Model.Narudzba>(_id);
 
-            var request = new NarudzbaInsertRequest()
+            var request = new NarudzbaUpdateRequest()
             {
                 Prihvaceno = true
             };
@@ -110,7 +110,7 @@ namespace eRestoran.WinUI.Narudzba
         private async void pictureOtkazi_Click(object sender, EventArgs e)
         {
             var narudzba = await _apiService.GetById<eRestoran.Model.Narudzba>(_id);
-            var request = new NarudzbaInsertRequest()
+            var request = new NarudzbaUpdateRequest()
             {
                 Prihvaceno = false,
                 Otkazano = true

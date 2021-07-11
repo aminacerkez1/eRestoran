@@ -25,6 +25,13 @@ namespace eRestoran_API.Services
             return Mapper.Map<List<eRestoran.Model.Namirnica>>(list);
         }
 
+
+        public List<eRestoran.Model.Namirnica> GetPrilog()
+        {
+            var list = _context.Namirnica.Where(x=>x.IsPrilog==true).ToList();
+            return Mapper.Map<List<eRestoran.Model.Namirnica>>(list);
+        }
+
         public eRestoran.Model.Namirnica Insert(NamirnicaInsertRequest request)
         {
             var entity = _mapper.Map<Database.Namirnica>(request);

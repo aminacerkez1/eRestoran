@@ -43,13 +43,31 @@ namespace eRestoran_API.Services
             return Mapper.Map<List<eRestoran.Model.Narudzba>>(list);
         }
 
-        public eRestoran.Model.Narudzba Update(int id, NarudzbaInsertRequest narudzba)
+        public eRestoran.Model.Narudzba Update(int id, NarudzbaUpdateRequest narudzba)
         {
             var entity = _context.Narudzba.Find(id);
-
             _mapper.Map(narudzba, entity);
             _context.SaveChanges();
             return _mapper.Map<eRestoran.Model.Narudzba>(entity);
         }
+
+        public eRestoran.Model.Narudzba Insert(NarudzbaInsertRequest request)
+        {
+            var entity = _mapper.Map<Database.Narudzba>(request);
+            entity.NaCekanju = true;
+            entity.CijenaNarudzbe = 0;
+            _context.Narudzba.Add(entity);
+            _context.SaveChanges();
+            return _mapper.Map<eRestoran.Model.Narudzba>(entity);
+        }
+
+        public eRestoran.Model.Narudzba UpdateCijena(int id, NarudzbaUpdateCijenaRequest request)
+        {
+            var entity = _context.Narudzba.Find(id);
+            entity.CijenaNarudzbe += request.CijenaNarudzbe;
+            _context.SaveChanges();
+            return _mapper.Map<eRestoran.Model.Narudzba>(entity);
+        }
+
     }
 }

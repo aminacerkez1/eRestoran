@@ -24,6 +24,14 @@ namespace eRestoran_API.Controllers
             return _service.Get();
         }
 
+        [HttpGet]
+        [Route("GetPrilog")]
+        public List<eRestoran.Model.Namirnica> GetPrilog()
+        {
+            return _service.GetPrilog();
+        }
+
+
         [HttpGet("{id}")]
         public eRestoran.Model.Namirnica GetById(int id)
         {

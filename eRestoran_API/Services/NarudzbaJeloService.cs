@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using eRestoran.Model.Requests;
 using eRestoran_API.Database;
 using System;
 using System.Collections.Generic;
@@ -39,6 +40,14 @@ namespace eRestoran_API.Services
         {
             var list = _context.NarudzbaJelo.Where(x => x.NarudzbaId == id).ToList();
             return Mapper.Map<List<eRestoran.Model.NarudzbaJelo>>(list);
+        }
+
+        public eRestoran.Model.NarudzbaJelo Insert(NarudzbaJeloInsertRequest request)
+        {
+            var entity = _mapper.Map<Database.NarudzbaJelo>(request);
+            _context.NarudzbaJelo.Add(entity);
+            _context.SaveChanges();
+            return _mapper.Map<eRestoran.Model.NarudzbaJelo>(entity);
         }
     }
 }

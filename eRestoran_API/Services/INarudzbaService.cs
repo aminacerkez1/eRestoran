@@ -16,6 +16,12 @@ namespace eRestoran_API.Services
 
         List<eRestoran.Model.Narudzba> GetByDates(DateTime dateFrom, DateTime dateTo);
 
-        eRestoran.Model.Narudzba Update(int id, NarudzbaInsertRequest narudzba);
+        eRestoran.Model.Narudzba Update(int id, NarudzbaUpdateRequest narudzba);
+
+        eRestoran.Model.Narudzba Insert(NarudzbaInsertRequest request);
+
+        eRestoran.Model.Narudzba UpdateCijena(int id, NarudzbaUpdateCijenaRequest narudzba);
+
+
     }
 }

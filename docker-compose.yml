@@ -1,0 +1,33 @@
+version: '3'
+services:
+#mssql docker
+  erestoran-sql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    restart: unless-stopped
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=QWEasd123!
+      - MSSQL_PID=Developer
+    ports:
+      - 1410:1433
+    networks:
+      - erestorannet
+
+  erestoran-api:
+    restart: unless-stopped
+    build:
+      context: .
+    environment:
+      - ConnectionStrings:DefaultConnection=Server=erestoran-sql,1433;Database=eRestoran;User=sa;Password=QWEasd123!;ConnectRetryCount=0
+    ports:
+      - 5010:5010
+    networks:
+      - erestorannet      
+    links:
+      - erestoran-sql
+    depends_on:
+      - erestoran-sql
+      
+networks:
+  erestorannet:
+    driver: bridge      

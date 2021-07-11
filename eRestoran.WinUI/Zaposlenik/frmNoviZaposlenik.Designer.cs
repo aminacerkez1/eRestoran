@@ -29,6 +29,7 @@ namespace eRestoran.WinUI.Zaposlenik
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNoviZaposlenik));
             this.label10 = new System.Windows.Forms.Label();
             this.textLozinkaPotvrda = new System.Windows.Forms.TextBox();
@@ -53,6 +54,8 @@ namespace eRestoran.WinUI.Zaposlenik
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPrezime = new System.Windows.Forms.TextBox();
             this.txtIme = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label10
@@ -75,6 +78,7 @@ namespace eRestoran.WinUI.Zaposlenik
             this.textLozinkaPotvrda.Size = new System.Drawing.Size(235, 20);
             this.textLozinkaPotvrda.TabIndex = 105;
             this.textLozinkaPotvrda.UseSystemPasswordChar = true;
+            this.textLozinkaPotvrda.Validating += new System.ComponentModel.CancelEventHandler(this.textLozinkaPotvrda_Validating);
             // 
             // btnProfilSpasi
             // 
@@ -112,6 +116,7 @@ namespace eRestoran.WinUI.Zaposlenik
             this.Lozinka.Size = new System.Drawing.Size(235, 20);
             this.Lozinka.TabIndex = 102;
             this.Lozinka.UseSystemPasswordChar = true;
+            this.Lozinka.Validating += new System.ComponentModel.CancelEventHandler(this.Lozinka_Validating);
             // 
             // label3
             // 
@@ -132,6 +137,7 @@ namespace eRestoran.WinUI.Zaposlenik
             this.KorisnickoIme.Name = "KorisnickoIme";
             this.KorisnickoIme.Size = new System.Drawing.Size(235, 20);
             this.KorisnickoIme.TabIndex = 100;
+            this.KorisnickoIme.Validating += new System.ComponentModel.CancelEventHandler(this.KorisnickoIme_Validating);
             // 
             // Nabavke
             // 
@@ -153,6 +159,7 @@ namespace eRestoran.WinUI.Zaposlenik
             this.comboBoxUloga.Name = "comboBoxUloga";
             this.comboBoxUloga.Size = new System.Drawing.Size(232, 21);
             this.comboBoxUloga.TabIndex = 98;
+            this.comboBoxUloga.Validating += new System.ComponentModel.CancelEventHandler(this.comboBoxUloga_Validating);
             // 
             // dateTimePickerDatumZaposlenja
             // 
@@ -274,6 +281,7 @@ namespace eRestoran.WinUI.Zaposlenik
             this.txtTelefon.Name = "txtTelefon";
             this.txtTelefon.Size = new System.Drawing.Size(235, 20);
             this.txtTelefon.TabIndex = 87;
+            this.txtTelefon.Validating += new System.ComponentModel.CancelEventHandler(this.txtTelefon_Validating);
             // 
             // txtEmail
             // 
@@ -282,6 +290,7 @@ namespace eRestoran.WinUI.Zaposlenik
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(235, 20);
             this.txtEmail.TabIndex = 86;
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // txtPrezime
             // 
@@ -290,6 +299,7 @@ namespace eRestoran.WinUI.Zaposlenik
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Size = new System.Drawing.Size(235, 20);
             this.txtPrezime.TabIndex = 85;
+            this.txtPrezime.Validating += new System.ComponentModel.CancelEventHandler(this.txtPrezime_Validating);
             // 
             // txtIme
             // 
@@ -299,6 +309,11 @@ namespace eRestoran.WinUI.Zaposlenik
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(235, 22);
             this.txtIme.TabIndex = 84;
+            this.txtIme.Validating += new System.ComponentModel.CancelEventHandler(this.txtIme_Validating);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmNoviZaposlenik
             // 
@@ -334,6 +349,7 @@ namespace eRestoran.WinUI.Zaposlenik
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmNoviZaposlenik";
             this.Load += new System.EventHandler(this.frmNoviZaposlenik_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,5 +380,6 @@ namespace eRestoran.WinUI.Zaposlenik
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtPrezime;
         private System.Windows.Forms.TextBox txtIme;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

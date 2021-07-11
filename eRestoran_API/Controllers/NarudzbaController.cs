@@ -47,10 +47,25 @@ namespace eRestoran_API.Controllers
         }
 
         [HttpPut("{id}")]
-        public eRestoran.Model.Narudzba Update(int id, NarudzbaInsertRequest request)
+        public eRestoran.Model.Narudzba Update(int id, NarudzbaUpdateRequest request)
         {
             return _service.Update(id, request);
         }
+
+        [HttpPost]
+        public eRestoran.Model.Narudzba Insert(NarudzbaInsertRequest request)
+        {
+            return _service.Insert(request);
+        }
+
+        [HttpPut]
+        [Route("UpdateCijena/{id}")]
+        public eRestoran.Model.Narudzba UpdateCijena(int id, NarudzbaUpdateCijenaRequest request)
+        {
+            return _service.UpdateCijena(id, request);
+        }
+
+
 
 
     }

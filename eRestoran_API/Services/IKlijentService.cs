@@ -18,5 +18,8 @@ namespace eRestoran_API.Services
 
 
         eRestoran.Model.Klijent Insert(KlijentInsertRequest request);
+
+
+        eRestoran.Model.Klijent Update(int id, KlijentInsertRequest request);
     }
 }
