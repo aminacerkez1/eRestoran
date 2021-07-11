@@ -118,7 +118,6 @@ namespace eRestoran.WinUI.Jelo
             this.comboBoxVrstaJela.Name = "comboBoxVrstaJela";
             this.comboBoxVrstaJela.Size = new System.Drawing.Size(235, 21);
             this.comboBoxVrstaJela.TabIndex = 47;
-          
             this.comboBoxVrstaJela.Validating += new System.ComponentModel.CancelEventHandler(this.comboBoxVrstaJela_Validating);
             // 
             // btnSnimiJelo
