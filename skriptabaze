@@ -1,86 +1,6 @@
-USE [master]
-GO
-/****** Object:  Database [IB140235]    Script Date: 11. 7. 2021. 21:25:48 ******/
-CREATE DATABASE [IB140235]
- CONTAINMENT = NONE
- ON  PRIMARY 
-( NAME = N'IB140235', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\IB140235.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
- LOG ON 
-( NAME = N'IB140235_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\IB140235_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
- WITH CATALOG_COLLATION = DATABASE_DEFAULT
-GO
-ALTER DATABASE [IB140235] SET COMPATIBILITY_LEVEL = 150
-GO
-IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
-begin
-EXEC [IB140235].[dbo].[sp_fulltext_database] @action = 'enable'
-end
-GO
-ALTER DATABASE [IB140235] SET ANSI_NULL_DEFAULT OFF 
-GO
-ALTER DATABASE [IB140235] SET ANSI_NULLS OFF 
-GO
-ALTER DATABASE [IB140235] SET ANSI_PADDING OFF 
-GO
-ALTER DATABASE [IB140235] SET ANSI_WARNINGS OFF 
-GO
-ALTER DATABASE [IB140235] SET ARITHABORT OFF 
-GO
-ALTER DATABASE [IB140235] SET AUTO_CLOSE OFF 
-GO
-ALTER DATABASE [IB140235] SET AUTO_SHRINK OFF 
-GO
-ALTER DATABASE [IB140235] SET AUTO_UPDATE_STATISTICS ON 
-GO
-ALTER DATABASE [IB140235] SET CURSOR_CLOSE_ON_COMMIT OFF 
-GO
-ALTER DATABASE [IB140235] SET CURSOR_DEFAULT  GLOBAL 
-GO
-ALTER DATABASE [IB140235] SET CONCAT_NULL_YIELDS_NULL OFF 
-GO
-ALTER DATABASE [IB140235] SET NUMERIC_ROUNDABORT OFF 
-GO
-ALTER DATABASE [IB140235] SET QUOTED_IDENTIFIER OFF 
-GO
-ALTER DATABASE [IB140235] SET RECURSIVE_TRIGGERS OFF 
-GO
-ALTER DATABASE [IB140235] SET  DISABLE_BROKER 
-GO
-ALTER DATABASE [IB140235] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
-GO
-ALTER DATABASE [IB140235] SET DATE_CORRELATION_OPTIMIZATION OFF 
-GO
-ALTER DATABASE [IB140235] SET TRUSTWORTHY OFF 
-GO
-ALTER DATABASE [IB140235] SET ALLOW_SNAPSHOT_ISOLATION OFF 
-GO
-ALTER DATABASE [IB140235] SET PARAMETERIZATION SIMPLE 
-GO
-ALTER DATABASE [IB140235] SET READ_COMMITTED_SNAPSHOT OFF 
-GO
-ALTER DATABASE [IB140235] SET HONOR_BROKER_PRIORITY OFF 
-GO
-ALTER DATABASE [IB140235] SET RECOVERY FULL 
-GO
-ALTER DATABASE [IB140235] SET  MULTI_USER 
-GO
-ALTER DATABASE [IB140235] SET PAGE_VERIFY CHECKSUM  
-GO
-ALTER DATABASE [IB140235] SET DB_CHAINING OFF 
-GO
-ALTER DATABASE [IB140235] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
-GO
-ALTER DATABASE [IB140235] SET TARGET_RECOVERY_TIME = 60 SECONDS 
-GO
-ALTER DATABASE [IB140235] SET DELAYED_DURABILITY = DISABLED 
-GO
-EXEC sys.sp_db_vardecimal_storage_format N'IB140235', N'ON'
-GO
-ALTER DATABASE [IB140235] SET QUERY_STORE = OFF
-GO
 USE [IB140235]
 GO
-/****** Object:  Table [dbo].[__EFMigrationsHistory]    Script Date: 11. 7. 2021. 21:25:48 ******/
+/****** Object:  Table [dbo].[__EFMigrationsHistory]    Script Date: 31. 8. 2021. 20:21:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -94,7 +14,7 @@ CREATE TABLE [dbo].[__EFMigrationsHistory](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Jelo]    Script Date: 11. 7. 2021. 21:25:48 ******/
+/****** Object:  Table [dbo].[Jelo]    Script Date: 31. 8. 2021. 20:21:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -112,7 +32,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Klijent]    Script Date: 11. 7. 2021. 21:25:48 ******/
+/****** Object:  Table [dbo].[Klijent]    Script Date: 31. 8. 2021. 20:21:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -132,7 +52,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Nabavka]    Script Date: 11. 7. 2021. 21:25:48 ******/
+/****** Object:  Table [dbo].[Nabavka]    Script Date: 31. 8. 2021. 20:21:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -148,7 +68,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[NabavkaNamirnica]    Script Date: 11. 7. 2021. 21:25:48 ******/
+/****** Object:  Table [dbo].[NabavkaNamirnica]    Script Date: 31. 8. 2021. 20:21:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -164,7 +84,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[NabavkaPice]    Script Date: 11. 7. 2021. 21:25:48 ******/
+/****** Object:  Table [dbo].[NabavkaPice]    Script Date: 31. 8. 2021. 20:21:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -180,7 +100,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Namirnica]    Script Date: 11. 7. 2021. 21:25:48 ******/
+/****** Object:  Table [dbo].[Namirnica]    Script Date: 31. 8. 2021. 20:21:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -197,7 +117,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Narudzba]    Script Date: 11. 7. 2021. 21:25:48 ******/
+/****** Object:  Table [dbo].[Narudzba]    Script Date: 31. 8. 2021. 20:21:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -218,7 +138,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[NarudzbaJelo]    Script Date: 11. 7. 2021. 21:25:48 ******/
+/****** Object:  Table [dbo].[NarudzbaJelo]    Script Date: 31. 8. 2021. 20:21:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -236,7 +156,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Ocjena]    Script Date: 11. 7. 2021. 21:25:48 ******/
+/****** Object:  Table [dbo].[Ocjena]    Script Date: 31. 8. 2021. 20:21:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -252,7 +172,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Pice]    Script Date: 11. 7. 2021. 21:25:48 ******/
+/****** Object:  Table [dbo].[Pice]    Script Date: 31. 8. 2021. 20:21:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -268,7 +188,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Rezervacija]    Script Date: 11. 7. 2021. 21:25:48 ******/
+/****** Object:  Table [dbo].[Rezervacija]    Script Date: 31. 8. 2021. 20:21:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -289,7 +209,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Uloga]    Script Date: 11. 7. 2021. 21:25:48 ******/
+/****** Object:  Table [dbo].[Uloga]    Script Date: 31. 8. 2021. 20:21:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -304,7 +224,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[VrstaJela]    Script Date: 11. 7. 2021. 21:25:48 ******/
+/****** Object:  Table [dbo].[VrstaJela]    Script Date: 31. 8. 2021. 20:21:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -318,7 +238,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Zaposlenik]    Script Date: 11. 7. 2021. 21:25:48 ******/
+/****** Object:  Table [dbo].[Zaposlenik]    Script Date: 31. 8. 2021. 20:21:32 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -361,6 +281,10 @@ SET IDENTITY_INSERT [dbo].[Klijent] ON
 INSERT [dbo].[Klijent] ([Ime], [Prezime], [BrojTelefona], [Adresa], [Username], [PasswordHash], [PasswordSalt], [KlijentID]) VALUES (N'Amina', N'Cerkez', N'64649463', N'Opine bb', N'amina', N'dqdFyQ7s1DfLENMQ/xQwsyUBMgk=', N'KpriYkmPu56LYlW2YcUy8Q==', 24)
 INSERT [dbo].[Klijent] ([Ime], [Prezime], [BrojTelefona], [Adresa], [Username], [PasswordHash], [PasswordSalt], [KlijentID]) VALUES (N'Samra', N'Cerkez', N'06131313', N'Opine', N'samra', N'K2wzLqt478LdCTfse5vEbWAtXW4=', N'Sci+gOlRQQf5tU5QyISCQw==', 25)
 INSERT [dbo].[Klijent] ([Ime], [Prezime], [BrojTelefona], [Adresa], [Username], [PasswordHash], [PasswordSalt], [KlijentID]) VALUES (N'Testmobile', N'Testprezime', N'061212454', N'Opine', N'klijent', N'qNALlCebuIz90NdeW4Qr1SLBvJg=', N'8UDQ1eSjG0daC3m+KsCETg==', 26)
+INSERT [dbo].[Klijent] ([Ime], [Prezime], [BrojTelefona], [Adresa], [Username], [PasswordHash], [PasswordSalt], [KlijentID]) VALUES (N'Novi', N'Novic', N'061212357', N'Opine bb', N'novi', N'lE5SYKsAegd1qx0XQN80ryabhuU=', N'AUOEPejfnQhpcYrF4dlLNA==', 27)
+INSERT [dbo].[Klijent] ([Ime], [Prezime], [BrojTelefona], [Adresa], [Username], [PasswordHash], [PasswordSalt], [KlijentID]) VALUES (N'Edis', N'Brkic', N'0616164616', N'Opine', N'edis', N'zR2IzmlNCACowEy4KxKKszmEgCg=', N'zUHbDMnOGocFNiXk1DSjZQ==', 28)
+INSERT [dbo].[Klijent] ([Ime], [Prezime], [BrojTelefona], [Adresa], [Username], [PasswordHash], [PasswordSalt], [KlijentID]) VALUES (N'Enis', N'Brkic', N'0612121221', N'Opine', N'enis', N'jDjP972igW7rssDwxLe3ALCkS4A=', N'CPvo164uK7fvVKHheDPWOg==', 29)
+INSERT [dbo].[Klijent] ([Ime], [Prezime], [BrojTelefona], [Adresa], [Username], [PasswordHash], [PasswordSalt], [KlijentID]) VALUES (N'Ajna', N'Ajnic', N'061212312', N'Opine', N'ajna', N'WTUakz89On7yLEaun6kkGzFKRD8=', N'lKcF9HYB1N3puqN63FjOOA==', 30)
 SET IDENTITY_INSERT [dbo].[Klijent] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Nabavka] ON 
@@ -387,7 +311,7 @@ SET IDENTITY_INSERT [dbo].[Namirnica] ON
 
 INSERT [dbo].[Namirnica] ([Naziv], [CijenaPoKomadu], [StanjeNaSkladistu], [IsPrilog], [NamirnicaID]) VALUES (N'Senf', CAST(5.00 AS Decimal(18, 2)), CAST(48.00 AS Decimal(18, 2)), 0, 3)
 INSERT [dbo].[Namirnica] ([Naziv], [CijenaPoKomadu], [StanjeNaSkladistu], [IsPrilog], [NamirnicaID]) VALUES (N'Paprika', CAST(2.00 AS Decimal(18, 2)), CAST(17.00 AS Decimal(18, 2)), 0, 5)
-INSERT [dbo].[Namirnica] ([Naziv], [CijenaPoKomadu], [StanjeNaSkladistu], [IsPrilog], [NamirnicaID]) VALUES (N'Puretina', CAST(15.00 AS Decimal(18, 2)), CAST(2.00 AS Decimal(18, 2)), 0, 6)
+INSERT [dbo].[Namirnica] ([Naziv], [CijenaPoKomadu], [StanjeNaSkladistu], [IsPrilog], [NamirnicaID]) VALUES (N'Puretina', CAST(15.00 AS Decimal(18, 2)), CAST(6.00 AS Decimal(18, 2)), 0, 6)
 INSERT [dbo].[Namirnica] ([Naziv], [CijenaPoKomadu], [StanjeNaSkladistu], [IsPrilog], [NamirnicaID]) VALUES (N'Kupus', CAST(2.00 AS Decimal(18, 2)), CAST(4.00 AS Decimal(18, 2)), 1, 7)
 INSERT [dbo].[Namirnica] ([Naziv], [CijenaPoKomadu], [StanjeNaSkladistu], [IsPrilog], [NamirnicaID]) VALUES (N'Paprike', CAST(4.00 AS Decimal(18, 2)), CAST(0.00 AS Decimal(18, 2)), 1, 8)
 INSERT [dbo].[Namirnica] ([Naziv], [CijenaPoKomadu], [StanjeNaSkladistu], [IsPrilog], [NamirnicaID]) VALUES (N'Rajcica', CAST(3.00 AS Decimal(18, 2)), CAST(5.00 AS Decimal(18, 2)), 1, 9)
@@ -404,6 +328,25 @@ INSERT [dbo].[Narudzba] ([KlijentID], [DatumNarudzbe], [VrijemeNarudzbe], [Cijen
 INSERT [dbo].[Narudzba] ([KlijentID], [DatumNarudzbe], [VrijemeNarudzbe], [CijenaNarudzbe], [Prihvaceno], [Otkazano], [Izvrseno], [NaCekanju], [NarudzbaID]) VALUES (26, CAST(N'2021-07-11T00:00:00.000' AS DateTime), N'17:40', CAST(34.00 AS Decimal(18, 2)), 1, NULL, NULL, NULL, 104)
 INSERT [dbo].[Narudzba] ([KlijentID], [DatumNarudzbe], [VrijemeNarudzbe], [CijenaNarudzbe], [Prihvaceno], [Otkazano], [Izvrseno], [NaCekanju], [NarudzbaID]) VALUES (26, CAST(N'2021-07-11T00:00:00.000' AS DateTime), N'14:0', CAST(12.00 AS Decimal(18, 2)), 1, NULL, NULL, NULL, 105)
 INSERT [dbo].[Narudzba] ([KlijentID], [DatumNarudzbe], [VrijemeNarudzbe], [CijenaNarudzbe], [Prihvaceno], [Otkazano], [Izvrseno], [NaCekanju], [NarudzbaID]) VALUES (26, CAST(N'2021-07-11T00:00:00.000' AS DateTime), N'6:0', CAST(34.00 AS Decimal(18, 2)), NULL, NULL, NULL, 1, 106)
+INSERT [dbo].[Narudzba] ([KlijentID], [DatumNarudzbe], [VrijemeNarudzbe], [CijenaNarudzbe], [Prihvaceno], [Otkazano], [Izvrseno], [NaCekanju], [NarudzbaID]) VALUES (27, CAST(N'2021-08-21T00:00:00.000' AS DateTime), N'21:0', CAST(24.00 AS Decimal(18, 2)), NULL, NULL, NULL, 1, 107)
+INSERT [dbo].[Narudzba] ([KlijentID], [DatumNarudzbe], [VrijemeNarudzbe], [CijenaNarudzbe], [Prihvaceno], [Otkazano], [Izvrseno], [NaCekanju], [NarudzbaID]) VALUES (30, CAST(N'2021-08-28T00:00:00.000' AS DateTime), N'5:25', CAST(24.00 AS Decimal(18, 2)), 1, NULL, NULL, NULL, 108)
+INSERT [dbo].[Narudzba] ([KlijentID], [DatumNarudzbe], [VrijemeNarudzbe], [CijenaNarudzbe], [Prihvaceno], [Otkazano], [Izvrseno], [NaCekanju], [NarudzbaID]) VALUES (30, CAST(N'2021-08-28T00:00:00.000' AS DateTime), N'8:0', CAST(17.00 AS Decimal(18, 2)), 1, NULL, NULL, NULL, 109)
+INSERT [dbo].[Narudzba] ([KlijentID], [DatumNarudzbe], [VrijemeNarudzbe], [CijenaNarudzbe], [Prihvaceno], [Otkazano], [Izvrseno], [NaCekanju], [NarudzbaID]) VALUES (30, CAST(N'2021-08-29T00:00:00.000' AS DateTime), N'0:0', CAST(24.00 AS Decimal(18, 2)), NULL, NULL, NULL, 1, 110)
+INSERT [dbo].[Narudzba] ([KlijentID], [DatumNarudzbe], [VrijemeNarudzbe], [CijenaNarudzbe], [Prihvaceno], [Otkazano], [Izvrseno], [NaCekanju], [NarudzbaID]) VALUES (30, CAST(N'2021-08-29T00:00:00.000' AS DateTime), N'8:0', CAST(15.00 AS Decimal(18, 2)), NULL, NULL, NULL, 1, 111)
+INSERT [dbo].[Narudzba] ([KlijentID], [DatumNarudzbe], [VrijemeNarudzbe], [CijenaNarudzbe], [Prihvaceno], [Otkazano], [Izvrseno], [NaCekanju], [NarudzbaID]) VALUES (30, CAST(N'2021-08-29T00:00:00.000' AS DateTime), N'2:25', CAST(17.00 AS Decimal(18, 2)), NULL, NULL, NULL, 1, 112)
+INSERT [dbo].[Narudzba] ([KlijentID], [DatumNarudzbe], [VrijemeNarudzbe], [CijenaNarudzbe], [Prihvaceno], [Otkazano], [Izvrseno], [NaCekanju], [NarudzbaID]) VALUES (30, CAST(N'2021-08-29T00:00:00.000' AS DateTime), N'16:0', CAST(17.00 AS Decimal(18, 2)), NULL, NULL, NULL, 1, 113)
+INSERT [dbo].[Narudzba] ([KlijentID], [DatumNarudzbe], [VrijemeNarudzbe], [CijenaNarudzbe], [Prihvaceno], [Otkazano], [Izvrseno], [NaCekanju], [NarudzbaID]) VALUES (30, CAST(N'2021-08-29T00:00:00.000' AS DateTime), N'16:25', CAST(15.00 AS Decimal(18, 2)), NULL, NULL, NULL, 1, 114)
+INSERT [dbo].[Narudzba] ([KlijentID], [DatumNarudzbe], [VrijemeNarudzbe], [CijenaNarudzbe], [Prihvaceno], [Otkazano], [Izvrseno], [NaCekanju], [NarudzbaID]) VALUES (30, CAST(N'2021-08-29T00:00:00.000' AS DateTime), N'16:30', CAST(13.00 AS Decimal(18, 2)), NULL, NULL, NULL, 1, 115)
+INSERT [dbo].[Narudzba] ([KlijentID], [DatumNarudzbe], [VrijemeNarudzbe], [CijenaNarudzbe], [Prihvaceno], [Otkazano], [Izvrseno], [NaCekanju], [NarudzbaID]) VALUES (30, CAST(N'2021-08-29T00:00:00.000' AS DateTime), N'16:35', CAST(15.00 AS Decimal(18, 2)), NULL, NULL, NULL, 1, 116)
+INSERT [dbo].[Narudzba] ([KlijentID], [DatumNarudzbe], [VrijemeNarudzbe], [CijenaNarudzbe], [Prihvaceno], [Otkazano], [Izvrseno], [NaCekanju], [NarudzbaID]) VALUES (30, CAST(N'2021-08-29T00:00:00.000' AS DateTime), N'16:45', CAST(17.00 AS Decimal(18, 2)), NULL, NULL, NULL, 1, 117)
+INSERT [dbo].[Narudzba] ([KlijentID], [DatumNarudzbe], [VrijemeNarudzbe], [CijenaNarudzbe], [Prihvaceno], [Otkazano], [Izvrseno], [NaCekanju], [NarudzbaID]) VALUES (30, CAST(N'2021-08-29T00:00:00.000' AS DateTime), N'17:0', CAST(17.00 AS Decimal(18, 2)), NULL, NULL, NULL, 1, 118)
+INSERT [dbo].[Narudzba] ([KlijentID], [DatumNarudzbe], [VrijemeNarudzbe], [CijenaNarudzbe], [Prihvaceno], [Otkazano], [Izvrseno], [NaCekanju], [NarudzbaID]) VALUES (30, CAST(N'2021-08-29T00:00:00.000' AS DateTime), N'20:0', CAST(13.00 AS Decimal(18, 2)), NULL, NULL, NULL, 1, 119)
+INSERT [dbo].[Narudzba] ([KlijentID], [DatumNarudzbe], [VrijemeNarudzbe], [CijenaNarudzbe], [Prihvaceno], [Otkazano], [Izvrseno], [NaCekanju], [NarudzbaID]) VALUES (30, CAST(N'2021-08-29T00:00:00.000' AS DateTime), N'18:0', CAST(8.00 AS Decimal(18, 2)), NULL, NULL, NULL, 1, 120)
+INSERT [dbo].[Narudzba] ([KlijentID], [DatumNarudzbe], [VrijemeNarudzbe], [CijenaNarudzbe], [Prihvaceno], [Otkazano], [Izvrseno], [NaCekanju], [NarudzbaID]) VALUES (30, CAST(N'2021-08-29T00:00:00.000' AS DateTime), N'21:0', CAST(17.00 AS Decimal(18, 2)), NULL, NULL, NULL, 1, 121)
+INSERT [dbo].[Narudzba] ([KlijentID], [DatumNarudzbe], [VrijemeNarudzbe], [CijenaNarudzbe], [Prihvaceno], [Otkazano], [Izvrseno], [NaCekanju], [NarudzbaID]) VALUES (30, CAST(N'2021-08-29T00:00:00.000' AS DateTime), N'21:0', CAST(12.00 AS Decimal(18, 2)), NULL, NULL, NULL, 1, 122)
+INSERT [dbo].[Narudzba] ([KlijentID], [DatumNarudzbe], [VrijemeNarudzbe], [CijenaNarudzbe], [Prihvaceno], [Otkazano], [Izvrseno], [NaCekanju], [NarudzbaID]) VALUES (30, CAST(N'2021-08-29T00:00:00.000' AS DateTime), N'20:20', CAST(15.00 AS Decimal(18, 2)), NULL, NULL, NULL, 1, 123)
+INSERT [dbo].[Narudzba] ([KlijentID], [DatumNarudzbe], [VrijemeNarudzbe], [CijenaNarudzbe], [Prihvaceno], [Otkazano], [Izvrseno], [NaCekanju], [NarudzbaID]) VALUES (30, CAST(N'2021-08-30T00:00:00.000' AS DateTime), N'21:00', CAST(20.00 AS Decimal(18, 2)), 1, NULL, NULL, NULL, 126)
+INSERT [dbo].[Narudzba] ([KlijentID], [DatumNarudzbe], [VrijemeNarudzbe], [CijenaNarudzbe], [Prihvaceno], [Otkazano], [Izvrseno], [NaCekanju], [NarudzbaID]) VALUES (26, CAST(N'2021-08-31T00:00:00.000' AS DateTime), N'16:10', CAST(8.00 AS Decimal(18, 2)), NULL, NULL, NULL, 1, 127)
 SET IDENTITY_INSERT [dbo].[Narudzba] OFF
 GO
 SET IDENTITY_INSERT [dbo].[NarudzbaJelo] ON 
@@ -413,6 +356,24 @@ INSERT [dbo].[NarudzbaJelo] ([NarudzbaID], [JeloID], [KolicinaJela], [PrilogJela
 INSERT [dbo].[NarudzbaJelo] ([NarudzbaID], [JeloID], [KolicinaJela], [PrilogJelaID], [KolicinaPriloga], [NarudzbaJeloID]) VALUES (104, 3, 2, 12, CAST(2.00 AS Decimal(18, 2)), 37)
 INSERT [dbo].[NarudzbaJelo] ([NarudzbaID], [JeloID], [KolicinaJela], [PrilogJelaID], [KolicinaPriloga], [NarudzbaJeloID]) VALUES (105, 6, 1, 9, CAST(2.00 AS Decimal(18, 2)), 38)
 INSERT [dbo].[NarudzbaJelo] ([NarudzbaID], [JeloID], [KolicinaJela], [PrilogJelaID], [KolicinaPriloga], [NarudzbaJeloID]) VALUES (106, 4, 2, 11, CAST(2.00 AS Decimal(18, 2)), 39)
+INSERT [dbo].[NarudzbaJelo] ([NarudzbaID], [JeloID], [KolicinaJela], [PrilogJelaID], [KolicinaPriloga], [NarudzbaJeloID]) VALUES (107, 1, 2, 7, CAST(1.00 AS Decimal(18, 2)), 40)
+INSERT [dbo].[NarudzbaJelo] ([NarudzbaID], [JeloID], [KolicinaJela], [PrilogJelaID], [KolicinaPriloga], [NarudzbaJeloID]) VALUES (108, 1, 2, 11, CAST(1.00 AS Decimal(18, 2)), 41)
+INSERT [dbo].[NarudzbaJelo] ([NarudzbaID], [JeloID], [KolicinaJela], [PrilogJelaID], [KolicinaPriloga], [NarudzbaJeloID]) VALUES (109, 3, 1, 8, CAST(1.00 AS Decimal(18, 2)), 42)
+INSERT [dbo].[NarudzbaJelo] ([NarudzbaID], [JeloID], [KolicinaJela], [PrilogJelaID], [KolicinaPriloga], [NarudzbaJeloID]) VALUES (110, 1, 2, 9, CAST(1.00 AS Decimal(18, 2)), 43)
+INSERT [dbo].[NarudzbaJelo] ([NarudzbaID], [JeloID], [KolicinaJela], [PrilogJelaID], [KolicinaPriloga], [NarudzbaJeloID]) VALUES (111, 2, 1, 11, CAST(2.00 AS Decimal(18, 2)), 44)
+INSERT [dbo].[NarudzbaJelo] ([NarudzbaID], [JeloID], [KolicinaJela], [PrilogJelaID], [KolicinaPriloga], [NarudzbaJeloID]) VALUES (112, 3, 1, 8, CAST(1.00 AS Decimal(18, 2)), 45)
+INSERT [dbo].[NarudzbaJelo] ([NarudzbaID], [JeloID], [KolicinaJela], [PrilogJelaID], [KolicinaPriloga], [NarudzbaJeloID]) VALUES (113, 3, 1, 12, CAST(2.00 AS Decimal(18, 2)), 46)
+INSERT [dbo].[NarudzbaJelo] ([NarudzbaID], [JeloID], [KolicinaJela], [PrilogJelaID], [KolicinaPriloga], [NarudzbaJeloID]) VALUES (114, 2, 1, 11, CAST(1.00 AS Decimal(18, 2)), 47)
+INSERT [dbo].[NarudzbaJelo] ([NarudzbaID], [JeloID], [KolicinaJela], [PrilogJelaID], [KolicinaPriloga], [NarudzbaJeloID]) VALUES (115, 7, 1, 11, CAST(1.00 AS Decimal(18, 2)), 48)
+INSERT [dbo].[NarudzbaJelo] ([NarudzbaID], [JeloID], [KolicinaJela], [PrilogJelaID], [KolicinaPriloga], [NarudzbaJeloID]) VALUES (116, 2, 1, 9, CAST(1.00 AS Decimal(18, 2)), 49)
+INSERT [dbo].[NarudzbaJelo] ([NarudzbaID], [JeloID], [KolicinaJela], [PrilogJelaID], [KolicinaPriloga], [NarudzbaJeloID]) VALUES (117, 4, 1, 11, CAST(1.00 AS Decimal(18, 2)), 50)
+INSERT [dbo].[NarudzbaJelo] ([NarudzbaID], [JeloID], [KolicinaJela], [PrilogJelaID], [KolicinaPriloga], [NarudzbaJeloID]) VALUES (118, 3, 1, 9, CAST(1.00 AS Decimal(18, 2)), 51)
+INSERT [dbo].[NarudzbaJelo] ([NarudzbaID], [JeloID], [KolicinaJela], [PrilogJelaID], [KolicinaPriloga], [NarudzbaJeloID]) VALUES (119, 7, 1, 9, CAST(1.00 AS Decimal(18, 2)), 52)
+INSERT [dbo].[NarudzbaJelo] ([NarudzbaID], [JeloID], [KolicinaJela], [PrilogJelaID], [KolicinaPriloga], [NarudzbaJeloID]) VALUES (120, 10, 1, 12, CAST(2.00 AS Decimal(18, 2)), 53)
+INSERT [dbo].[NarudzbaJelo] ([NarudzbaID], [JeloID], [KolicinaJela], [PrilogJelaID], [KolicinaPriloga], [NarudzbaJeloID]) VALUES (121, 3, 1, 13, CAST(1.00 AS Decimal(18, 2)), 54)
+INSERT [dbo].[NarudzbaJelo] ([NarudzbaID], [JeloID], [KolicinaJela], [PrilogJelaID], [KolicinaPriloga], [NarudzbaJeloID]) VALUES (122, 1, 1, 11, CAST(3.00 AS Decimal(18, 2)), 55)
+INSERT [dbo].[NarudzbaJelo] ([NarudzbaID], [JeloID], [KolicinaJela], [PrilogJelaID], [KolicinaPriloga], [NarudzbaJeloID]) VALUES (123, 2, 1, 8, CAST(1.00 AS Decimal(18, 2)), 56)
+INSERT [dbo].[NarudzbaJelo] ([NarudzbaID], [JeloID], [KolicinaJela], [PrilogJelaID], [KolicinaPriloga], [NarudzbaJeloID]) VALUES (127, 10, 1, 7, CAST(1.00 AS Decimal(18, 2)), 57)
 SET IDENTITY_INSERT [dbo].[NarudzbaJelo] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Ocjena] ON 
@@ -424,6 +385,11 @@ INSERT [dbo].[Ocjena] ([KlijentID], [Ocjena], [JeloID], [OcjenaID]) VALUES (26, 
 INSERT [dbo].[Ocjena] ([KlijentID], [Ocjena], [JeloID], [OcjenaID]) VALUES (26, 1, 3, 62)
 INSERT [dbo].[Ocjena] ([KlijentID], [Ocjena], [JeloID], [OcjenaID]) VALUES (26, 5, 3, 63)
 INSERT [dbo].[Ocjena] ([KlijentID], [Ocjena], [JeloID], [OcjenaID]) VALUES (26, 4, 6, 64)
+INSERT [dbo].[Ocjena] ([KlijentID], [Ocjena], [JeloID], [OcjenaID]) VALUES (30, 5, 1, 65)
+INSERT [dbo].[Ocjena] ([KlijentID], [Ocjena], [JeloID], [OcjenaID]) VALUES (30, 4, 3, 66)
+INSERT [dbo].[Ocjena] ([KlijentID], [Ocjena], [JeloID], [OcjenaID]) VALUES (26, 5, 1, 67)
+INSERT [dbo].[Ocjena] ([KlijentID], [Ocjena], [JeloID], [OcjenaID]) VALUES (26, 4, 3, 68)
+INSERT [dbo].[Ocjena] ([KlijentID], [Ocjena], [JeloID], [OcjenaID]) VALUES (26, 3, 6, 69)
 SET IDENTITY_INSERT [dbo].[Ocjena] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Pice] ON 
@@ -439,6 +405,11 @@ SET IDENTITY_INSERT [dbo].[Rezervacija] ON
 INSERT [dbo].[Rezervacija] ([KlijentID], [DatumRezervacije], [VrijemeRezervacije], [BrojOsoba], [Otkazano], [Prihvaceno], [NaCekanju], [Izvrseno], [RezervacijaID]) VALUES (24, CAST(N'2021-07-11T00:00:00.000' AS DateTime), N'6:55', 2, NULL, NULL, 1, NULL, 49)
 INSERT [dbo].[Rezervacija] ([KlijentID], [DatumRezervacije], [VrijemeRezervacije], [BrojOsoba], [Otkazano], [Prihvaceno], [NaCekanju], [Izvrseno], [RezervacijaID]) VALUES (26, CAST(N'2021-07-11T00:00:00.000' AS DateTime), N'7:15', 2, NULL, NULL, 1, NULL, 50)
 INSERT [dbo].[Rezervacija] ([KlijentID], [DatumRezervacije], [VrijemeRezervacije], [BrojOsoba], [Otkazano], [Prihvaceno], [NaCekanju], [Izvrseno], [RezervacijaID]) VALUES (26, CAST(N'2021-07-11T00:00:00.000' AS DateTime), N'17:0', 4, NULL, NULL, 1, NULL, 51)
+INSERT [dbo].[Rezervacija] ([KlijentID], [DatumRezervacije], [VrijemeRezervacije], [BrojOsoba], [Otkazano], [Prihvaceno], [NaCekanju], [Izvrseno], [RezervacijaID]) VALUES (27, CAST(N'2021-08-21T00:00:00.000' AS DateTime), N'15:0', 2, NULL, NULL, 1, NULL, 52)
+INSERT [dbo].[Rezervacija] ([KlijentID], [DatumRezervacije], [VrijemeRezervacije], [BrojOsoba], [Otkazano], [Prihvaceno], [NaCekanju], [Izvrseno], [RezervacijaID]) VALUES (30, CAST(N'2021-08-28T00:00:00.000' AS DateTime), N'0:0', 5, NULL, NULL, 1, NULL, 53)
+INSERT [dbo].[Rezervacija] ([KlijentID], [DatumRezervacije], [VrijemeRezervacije], [BrojOsoba], [Otkazano], [Prihvaceno], [NaCekanju], [Izvrseno], [RezervacijaID]) VALUES (30, CAST(N'2021-08-28T00:00:00.000' AS DateTime), N'6:0', 2, NULL, NULL, 1, NULL, 54)
+INSERT [dbo].[Rezervacija] ([KlijentID], [DatumRezervacije], [VrijemeRezervacije], [BrojOsoba], [Otkazano], [Prihvaceno], [NaCekanju], [Izvrseno], [RezervacijaID]) VALUES (30, CAST(N'2021-08-29T00:00:00.000' AS DateTime), N'4:0', 1, NULL, NULL, 1, NULL, 55)
+INSERT [dbo].[Rezervacija] ([KlijentID], [DatumRezervacije], [VrijemeRezervacije], [BrojOsoba], [Otkazano], [Prihvaceno], [NaCekanju], [Izvrseno], [RezervacijaID]) VALUES (30, CAST(N'2021-08-29T00:00:00.000' AS DateTime), N'11:0', 3, NULL, NULL, 1, NULL, 56)
 SET IDENTITY_INSERT [dbo].[Rezervacija] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Uloga] ON 
@@ -457,8 +428,9 @@ SET IDENTITY_INSERT [dbo].[VrstaJela] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Zaposlenik] ON 
 
-INSERT [dbo].[Zaposlenik] ([Ime], [Prezime], [DatumRodjenja], [DatumZaposlenja], [IsAdministrator], [UlogaID], [Username], [PasswordHash], [PasswordSalt], [Email], [Telefon], [ZaposlenikID]) VALUES (N'Amina', N'Cerkez', CAST(N'1996-01-22T00:00:00.000' AS DateTime), CAST(N'2020-02-06T00:00:00.000' AS DateTime), 1, 2, N'AminaCerkez', N'gsHLDm2mpDj6zsGtsOoLZeT9ULM=', N'RlDQhKZ2knRPmWbJ6k1Nmw==', N'amina.cerkez@outlook.com', N'22222222', 1)
-INSERT [dbo].[Zaposlenik] ([Ime], [Prezime], [DatumRodjenja], [DatumZaposlenja], [IsAdministrator], [UlogaID], [Username], [PasswordHash], [PasswordSalt], [Email], [Telefon], [ZaposlenikID]) VALUES (N'TestIme', N'TestPrezime', CAST(N'2021-07-11T20:39:07.700' AS DateTime), CAST(N'2021-07-11T20:39:07.687' AS DateTime), 1, 1, N'zaposlenik', N'ZVdYJTVdAYXFi4qfdqgvleEXN30=', N'0O82pwTfZ7KJEjx82aYozA==', N'test@outlook.com', N'0612121313', 26)
+INSERT [dbo].[Zaposlenik] ([Ime], [Prezime], [DatumRodjenja], [DatumZaposlenja], [IsAdministrator], [UlogaID], [Username], [PasswordHash], [PasswordSalt], [Email], [Telefon], [ZaposlenikID]) VALUES (N'Amina', N'Cerkez', CAST(N'1996-01-22T00:00:00.000' AS DateTime), CAST(N'2020-02-06T00:00:00.000' AS DateTime), 1, 1, N'AminaCerkez', N'gsHLDm2mpDj6zsGtsOoLZeT9ULM=', N'RlDQhKZ2knRPmWbJ6k1Nmw==', N'amina.cerkez@outlook.com', N'22222222', 1)
+INSERT [dbo].[Zaposlenik] ([Ime], [Prezime], [DatumRodjenja], [DatumZaposlenja], [IsAdministrator], [UlogaID], [Username], [PasswordHash], [PasswordSalt], [Email], [Telefon], [ZaposlenikID]) VALUES (N'TestIme', N'TestPrezime', CAST(N'2021-07-11T20:39:07.700' AS DateTime), CAST(N'2021-07-11T20:39:07.687' AS DateTime), 1, 2, N'zaposlenik', N'ZVdYJTVdAYXFi4qfdqgvleEXN30=', N'0O82pwTfZ7KJEjx82aYozA==', N'test@outlook.com', N'0612121313', 26)
+INSERT [dbo].[Zaposlenik] ([Ime], [Prezime], [DatumRodjenja], [DatumZaposlenja], [IsAdministrator], [UlogaID], [Username], [PasswordHash], [PasswordSalt], [Email], [Telefon], [ZaposlenikID]) VALUES (N'Edina', N'Edinic', CAST(N'2021-01-01T18:47:33.000' AS DateTime), CAST(N'2021-08-31T18:47:33.920' AS DateTime), 0, 2, N'edina', N'ySgyPj7J9zMRK7lcsCjq2S4vGzg=', N'OXHdUa6rV5unu+eIeoAqiQ==', N'edina@outlook.com', N'2323232332', 27)
 SET IDENTITY_INSERT [dbo].[Zaposlenik] OFF
 GO
 ALTER TABLE [dbo].[Jelo]  WITH CHECK ADD  CONSTRAINT [FK_Jelo_VrstaJela] FOREIGN KEY([VrstaJelaID])
@@ -531,8 +503,3 @@ REFERENCES [dbo].[Uloga] ([UlogaID])
 GO
 ALTER TABLE [dbo].[Zaposlenik] CHECK CONSTRAINT [FK_Zaposlenik_Uloga]
 GO
-USE [master]
-GO
-ALTER DATABASE [IB140235] SET  READ_WRITE 
-GO
-
