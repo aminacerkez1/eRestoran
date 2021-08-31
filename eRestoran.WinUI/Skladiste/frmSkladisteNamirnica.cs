@@ -27,9 +27,17 @@ namespace eRestoran.WinUI.Skladiste
             btnSkladisteNamirnica.BackColor = Color.Red;
             btnSkladistePica.BackColor = Color.DarkRed;
             var result = await _apiService.Get<List<eRestoran.Model.Namirnica>>(null);
-
             dgvSkladisteNamirnica.AutoGenerateColumns = false;
             dgvSkladisteNamirnica.DataSource = result;
+            foreach (DataGridViewRow row in dgvSkladisteNamirnica.Rows)
+            {
+                if(Convert.ToInt32(row.Cells[3].Value)<5)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Black;
+                    row.DefaultCellStyle.SelectionBackColor = Color.Black;
+                }
+            }
+            
 
         }
 
@@ -68,5 +76,7 @@ namespace eRestoran.WinUI.Skladiste
             frm.FormClosing += new FormClosingEventHandler(onFormClosing);
             frm.Show();
         }
+
+        
     }
 }

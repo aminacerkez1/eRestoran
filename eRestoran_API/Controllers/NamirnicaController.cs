@@ -1,5 +1,6 @@
 ﻿using eRestoran.Model.Requests;
 using eRestoran_API.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace eRestoran_API.Controllers
 {
+    [Authorize(AuthenticationSchemes = "BasicAuthentication")]
     [Route("api/[controller]")]
     [ApiController]
     public class NamirnicaController : ControllerBase
@@ -38,12 +40,14 @@ namespace eRestoran_API.Controllers
             return _service.GetById(id);
         }
 
+        [Authorize(Roles = "Administrator, Konobar, Kuhar")]
         [HttpPut("{id}")]
         public eRestoran.Model.Namirnica Update(int id, NamirnicaUpdateRequest request)
         {
             return _service.Update(id, request);
         }
 
+        [Authorize(Roles = "Administrator, Konobar, Kuhar")]
         [HttpPost]
         public eRestoran.Model.Namirnica Insert(NamirnicaInsertRequest request)
         {

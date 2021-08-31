@@ -121,10 +121,62 @@
     <value>False</value>
   </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btnProfile.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btnPromet.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnPromet.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Sitka Text, 12.25pt, style=Bold</value>
+  </data>
+  <data name="btnPromet.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5QgeFAcWqlFjxgAAAUhJREFU
+        SEu9lD9OAkEUxlcTYmHhEUArz+AN0CA0XoJLaGKhlYlWtoTOQ3gGSzvDBUi0MP4L4++beersCoZlZv2S
+        X9h57+33zQ4LReNyzt3AiS3zC3Ppzpb5lRLAfTtwCudzGMFxasBZuH2hZqkBm9CHowjt/h1m4JICqsKn
+        Cy/wBg+QLwCPffgyH8gT6gUwtwZDOLSSF2sd06vRt1q9AGZkfumnw/kOrX4A2rnMB34Ycb18AH2ZX/lJ
+        5ybwBAq5Bh2JzHs27sV6uQB68c5lrnd/Dx5VQN/HEoua/iHu/wygHu9cb0XHWuop5Ba6ViqJ+jpsLAyg
+        9mvn1qqncH85gHUecyl4/ARwXTXfttZqCj6lgItQ8mfetvLqCl4hgM8WPEMecwkjKX6CXdiyZbq8feVL
+        zqr/CviAaQOMFaCf9LxmDsb2HE2pKD4B9Zn7qz3twdkAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnPromet.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="btnPromet.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnPromet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>11, 556</value>
+  </data>
+  <data name="btnPromet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 41</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnPromet.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="btnPromet.Text" xml:space="preserve">
+    <value> Promet</value>
+  </data>
+  <data name="btnPromet.TextImageRelation" type="System.Windows.Forms.TextImageRelation, System.Windows.Forms">
+    <value>ImageBeforeText</value>
+  </data>
+  <data name="&gt;&gt;btnPromet.Name" xml:space="preserve">
+    <value>btnPromet</value>
+  </data>
+  <data name="&gt;&gt;btnPromet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPromet.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;btnPromet.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnProfile.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
   <data name="btnProfile.Font" type="System.Drawing.Font, System.Drawing">
     <value>Sitka Text, 12.25pt, style=Bold</value>
   </data>
@@ -155,7 +207,6 @@
   <data name="btnProfile.Size" type="System.Drawing.Size, System.Drawing">
     <value>190, 41</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnProfile.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
   </data>
@@ -175,7 +226,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btnProfile.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="btnJela.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -241,7 +292,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btnJela.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="btnNarudzba.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -295,7 +346,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btnNarudzba.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="btnSkladiste.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -346,7 +397,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btnSkladiste.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="pictureBox2.ErrorImage" type="System.Resources.ResXNullRef, System.Windows.Forms">
     <value />
@@ -11288,7 +11339,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="btnNabavke.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -11343,7 +11394,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btnNabavke.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="button6.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -11367,7 +11418,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="button6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 559</value>
+    <value>13, 603</value>
   </data>
   <data name="button6.Size" type="System.Drawing.Size, System.Drawing">
     <value>190, 41</value>
@@ -11391,7 +11442,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;button6.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="btnZaposlenici.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -11446,7 +11497,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btnZaposlenici.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="btnRezervacije.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -11496,7 +11547,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btnRezervacije.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="btnKlijenti.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -11548,7 +11599,7 @@
     <value>panel1</value>
   </data>
   <data name="&gt;&gt;btnKlijenti.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>

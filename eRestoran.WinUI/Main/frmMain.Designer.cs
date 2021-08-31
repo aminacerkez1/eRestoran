@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Panel panel1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+            this.btnPromet = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnJela = new System.Windows.Forms.Button();
             this.btnNarudzba = new System.Windows.Forms.Button();
@@ -60,6 +61,7 @@
             // 
             panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            panel1.Controls.Add(this.btnPromet);
             panel1.Controls.Add(this.btnProfile);
             panel1.Controls.Add(this.btnJela);
             panel1.Controls.Add(this.btnNarudzba);
@@ -74,6 +76,16 @@
             resources.ApplyResources(panel1, "panel1");
             panel1.ForeColor = System.Drawing.Color.Red;
             panel1.Name = "panel1";
+            // 
+            // btnPromet
+            // 
+            this.btnPromet.BackColor = System.Drawing.Color.Transparent;
+            this.btnPromet.FlatAppearance.BorderSize = 0;
+            resources.ApplyResources(this.btnPromet, "btnPromet");
+            this.btnPromet.ForeColor = System.Drawing.Color.White;
+            this.btnPromet.Name = "btnPromet";
+            this.btnPromet.UseVisualStyleBackColor = false;
+            this.btnPromet.Click += new System.EventHandler(this.btnPromet_Click);
             // 
             // btnProfile
             // 
@@ -273,6 +285,7 @@
         private System.Windows.Forms.Button btnNarudzba;
         private System.Windows.Forms.Button btnJela;
         private System.Windows.Forms.Button btnProfile;
+        private System.Windows.Forms.Button btnPromet;
     }
 }
 

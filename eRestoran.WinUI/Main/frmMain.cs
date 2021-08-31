@@ -4,6 +4,7 @@ using eRestoran.WinUI.Klijent;
 using eRestoran.WinUI.Nabavka;
 using eRestoran.WinUI.Narudzba;
 using eRestoran.WinUI.Profil;
+using eRestoran.WinUI.Promet;
 using eRestoran.WinUI.Rezervacija;
 using eRestoran.WinUI.Skladiste;
 using eRestoran.WinUI.Zaposlenik;
@@ -226,6 +227,18 @@ namespace eStudio.WinUI.Main
                 childForm.Close();
             }
             frmProfil frm = new frmProfil();
+            frm.MdiParent = frmMain.ActiveForm;
+            frm.WindowState = FormWindowState.Maximized;
+            frm.Show();
+        }
+
+        private void btnPromet_Click(object sender, EventArgs e)
+        {
+            foreach (Form childForm in MdiChildren)
+            {
+                childForm.Close();
+            }
+            frmPromet frm = new frmPromet();
             frm.MdiParent = frmMain.ActiveForm;
             frm.WindowState = FormWindowState.Maximized;
             frm.Show();

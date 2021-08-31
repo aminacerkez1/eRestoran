@@ -39,10 +39,7 @@ namespace eRestoran.WinUI.Zaposlenik
             var Id = dgvZaposlenici.SelectedRows[0].Cells[0].Value;
             frmZaposlenikDetalji frm = new frmZaposlenikDetalji(int.Parse(Id.ToString()));
 
-            /*if(frm.ShowDialog() == DialogResult.OK)
-            {
-                MessageBox.Show("Svaka cast");
-            }*/
+           
             frm.ShowDialog();
         }
 

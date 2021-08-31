@@ -27,6 +27,14 @@ namespace eRestoran.WinUI.Skladiste
             var result = await _apiService.Get<List<eRestoran.Model.Pice>>(null);
             dgvSkladistePice.AutoGenerateColumns = false;
             dgvSkladistePice.DataSource = result;
+            foreach (DataGridViewRow row in dgvSkladistePice.Rows)
+            {
+                if (Convert.ToInt32(row.Cells[3].Value) < 5)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Black;
+                    row.DefaultCellStyle.SelectionBackColor = Color.Black;
+                }
+            }
 
         }
 
